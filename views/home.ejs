@@ -4,5 +4,11 @@
 <h1>Home</h1>
 <p> <%= homeContent %> </p>
 
+<!-- Render all the elements in the post array collection -->
+<% postCollection.forEach( function(post){ %>
+  <h1> <%= post.postTitle %> </h1>
+  <p> <%= post.postBody %> </p>
+<% }); %>
+
 <!-- Footer Template -->
 <%- include('partials/footer'); -%>

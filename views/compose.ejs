@@ -2,8 +2,21 @@
 <%- include('partials/header'); -%>
 
 <h1>Compose</h1>
-<input type="text" name="" value="">
-<button type="submit" name="button">Publish</button>
+
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <label for="" class="form-label">Title</label>
+    <input type="text" name="postTitle" class="form-control" value="">
+  </div>
+  <div class="form-group">
+    <label for="" class="form-label">Post</label>
+    <textarea name="postBody" class="form-control" id="" rows="3"></textarea>
+  </div>
+  <button type="submit" name="button" class="btn btn-primary">Publish</button>
+
+
+
+</form>
 
 <!-- Footer Template -->
 <%- include('partials/footer'); -%>
