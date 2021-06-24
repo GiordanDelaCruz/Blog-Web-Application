@@ -24,7 +24,7 @@ app.get("/", function(req, res){
     homeContent: homeStartingContent,
     postCollection: postArr
   });
-  
+
 });
 
 // Load About page
@@ -46,6 +46,19 @@ app.get("/compose", function(req, res){
 
   // Render Home EJS Template
   res.render("compose");
+});
+
+// Load Post pages
+app.get("/posts/:postName", function(req, res){
+
+  // Check if any posts share the same name as the postName parameter
+  for( let i in postArr){
+    console.log("post:", postArr[i], "postName:", req.params.postName);
+    if( req.params.postName === postArr[i].postTitle ){
+      console.log("Matching")
+    }
+  }
+
 });
 
 // Handle POST requests on Compose page
