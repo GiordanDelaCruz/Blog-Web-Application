@@ -63,6 +63,14 @@ app.get("/posts/:postName", function(req, res){
 
      if( requestedTitle === storedTitle ){
        console.log("Matching");
+       console.log("postBody:", post.postBody);
+
+       // Render a macthing Post EJS Template
+       res.render("post", {
+         postTitle: post.postTitle,
+         postBody: post.postBody
+       });
+
      }else{
        console.log("No Match");
      }
