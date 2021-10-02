@@ -67,8 +67,8 @@ app.get("/posts/:postName", function(req, res){
 
        // Render a macthing Post EJS Template
        res.render("post", {
-         postTitle: post.postTitle,
-         postBody: post.postBody
+         title: post.postTitle,
+         content: post.postBody
        });
 
      }else{
