@@ -7,7 +7,10 @@
 <!-- Render all the elements in the post array collection -->
 <% postCollection.forEach( function(post){ %>
   <h1> <%= post.postTitle %> </h1>
-  <p> <%= post.postBody %> </p>
+  <p>
+    <%= post.postBody.substring(0, 100) + "..."; %>
+    <a href="/posts/<%= post.postTitle %>">Read More</a>
+  </p>
 <% }); %>
 
 <!-- Footer Template -->

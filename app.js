@@ -62,8 +62,6 @@ app.get("/posts/:postName", function(req, res){
     const storedTitle = _.lowerCase(post.postTitle);
 
      if( requestedTitle === storedTitle ){
-       console.log("Matching");
-       console.log("postBody:", post.postBody);
 
        // Render a macthing Post EJS Template
        res.render("post", {
